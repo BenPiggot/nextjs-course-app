@@ -6,14 +6,23 @@
   "license": "MIT",
   "dependencies": {
     "@theme-ui/presets": "^0.3.0",
+    "@types/node": "^14.14.2",
+    "@types/react": "^16.9.53",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv-load": "^2.0.0",
     "next": "^9.5.0",
     "next-connect": "^0.8.1",
     "next-env": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "typescript": "^4.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
 }
