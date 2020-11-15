@@ -14,7 +14,6 @@ export default ({ note }) => {
 }
 
 export async function getServerSideProps({ params, req, res }) {
-  console.log(params.id)
   const response = await fetch(`${process.env.API_URL}/api/notes/${params.id}`)
 
   if (!response.ok && typeof window === 'undefined') {
