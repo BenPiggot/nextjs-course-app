@@ -14,17 +14,17 @@ export default ({ note }) => {
 }
 
 export async function getServerSideProps({ params, req, res }) {
-  console.log(params)
-  const response = await fetch(`${process.env.APL_URL}/api/notes/${params.id}`)
+  console.log(params.id)
+  const response = await fetch(`${process.env.API_URL}/api/notes/${params.id}`)
 
-  // so much power!
-  if (!response.ok) {
+  if (!response.ok && typeof window === 'undefined') {
     res.writeHead(302, { Location: '/notes' })
     res.end()
     return { props: {} }
   }
 
   const { data } = await response.json()
+
 
   if (data) {
     return {

@@ -1,8 +1,8 @@
 const nextEnv = require('next-env');
-const dotEnvLoad = require('dotenv-load');
+// const dotEnvLoad = require('dotenv-load');
 
 
-dotEnvLoad();
+// dotEnvLoad();
 
 
 const withEnv = nextEnv();
